@@ -1,23 +1,33 @@
 <script>
-  import { onMount } from 'svelte';
+  import { onMount ,afterUpdate} from 'svelte';
   import {base_api,apikey} from '../../configapi/api.js'
   import {Link} from 'svelte-navigator'
   let videos = []
  let loading = true;
- let totalpages; // Add this line
 
   let currentpage = 1
   async function getapi(page){
-    const response = await fetch(`${base_api}/indo/?key=${apikey}&limit=25&page=${page}`);
+    const response = await fetch(`${base_api}/indo/?key=${apikey}&page=${page}`);
     const data = await response.json();
     videos = data.videos;
-     totalpages = Math.ceil(data.total / 25); 
      loading = false;
   }
 
   onMount(async () => {
     await getapi(currentpage)
   });
+
+  afterUpdate(async () => {
+    await getapi(currentpage);
+  });
+
+  async function gotoPage(page) {
+    if (page >= 1 ) {
+      loading = true
+      currentpage = page;
+      await getapi(currentpage);
+    }
+  }
 </script>
 
 
@@ -40,6 +50,8 @@
 </div>
 <br>
 <h5 style="color:white">Sedang Mencari data ....</h5>
+<br>
+<p>Jika Terlalu lama bisa refresh kembali atau close buka lagi</p>
 </div>
 
 
@@ -80,13 +92,17 @@
     </div>
   {/each}
 </div>
-<div class="row">
-  {#each Array.from({ length: totalpages }, (_, i) => i + 1) as page}
-    <li class="pagination-item {page === currentpage ? 'active' : ''}">
-      <a on:click={() => gotoPage(page)}>{page}</a>
-    </li>
-  {/each}
-</div>
+  <div class="row">
+    <div style="display:flex;justify-content: space-evenly;">
+      <button class="waves-effect btn waves"
+      style="background-color:#fabb0f;color: black;" 
+       on:click="{() => gotoPage(currentpage - 1)}" disabled="{currentpage === 1}">Previous</button>
+    <button on:click="{() => gotoPage(currentpage + 1)}"
+      class="waves-effect btn waves"
+      style="background-color:#fabb0f;color: black;" 
+        >Next</button>
+    </div>
+  </div>
 
 {/if}
 
