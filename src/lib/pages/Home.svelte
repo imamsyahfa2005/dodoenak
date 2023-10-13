@@ -1,7 +1,8 @@
 <script >
 import Indo from '../component/Indo.svelte' 
 import Jepang from '../component/Jepang.svelte' 
-import Barat from '../component/Barat.svelte'	
+import Barat from '../component/Barat.svelte' 
+import Annal from '../component/Annal.svelte'	
  
 
  let activeTab = 1; // Menentukan tab aktif secara default
@@ -19,6 +20,7 @@ import Barat from '../component/Barat.svelte'
   <div class="tab " on:click={() => setActiveTab(1)}>INDO</div>
   <div class="tab" on:click={() => setActiveTab(2)}>Jepang</div>
 <div class="tab" on:click={() => setActiveTab(3)}>Barat</div>
+<div class="tab" on:click={() => setActiveTab(4)}>Annal</div>
 
   <!-- Tambahkan tab lain sesuai kebutuhan -->
 </div>
@@ -39,7 +41,11 @@ import Barat from '../component/Barat.svelte'
     <h5 style="color:#f5b505;font-weight: bold;">Bokep Barat</h5>
   </div>
     <Barat />
-    
+  {:else if activeTab === 4}
+    <div style="margin:10px">
+    <h5 style="color:#f5b505;font-weight: bold;">Bokep Annal</h5>
+  </div>
+    <Annal />
   <!-- Tambahkan blok lain untuk komponen tambahan -->
   {/if}
 </div>
