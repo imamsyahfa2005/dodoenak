@@ -74,6 +74,7 @@
           <p class="card-text">Diupload : {video.date_formatted}
          </p>
           </div>
+          <p class="card-text">Ditonton : {video.views}</p>
 
           <div style="display:flex;justify-content: end;">
             <!-- ACTION -->
