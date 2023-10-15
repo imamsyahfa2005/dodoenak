@@ -7,12 +7,20 @@
 
  
   let currentpage = 1
-   async function getapi(page){
+
+async function getapi(page){
     const response = await fetch(`${base_api}/indo/?key=${apikey}&page=${page}`);
     const data = await response.json();
     videos = data.videos;
      loading = false;
   }
+  
+  //  async function getapi(page){
+  //   const response = await fetch(`${base_api}/indo/?key=${apikey}&page=${page}`);
+  //   const data = await response.json();
+  //   videos = data.videos;
+  //    loading = false;
+  // }
   onMount(async () => {
     await getapi(currentpage)
   });
