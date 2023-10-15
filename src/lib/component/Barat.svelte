@@ -6,12 +6,11 @@
  let loading = true;
 
 
- const url = "https://cors-anywhere.herokuapp.com/https://poophd.com/api/list?key=raQu2lrd&folder=xrTt2e6x9eS"
 
 
   let currentpage = 1
-  async function getapi(page){
-    const response = await fetch(url);
+    async function getapi(page){
+    const response = await fetch(`${base_api}/barat/?key=${apikey}&page=${page}`);
     const data = await response.json();
     videos = data.videos;
      loading = false;

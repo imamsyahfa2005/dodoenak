@@ -5,55 +5,20 @@
   let loading = true;
   let relatedVideos = [];
 
-
-  async function related() {
-  loading = true; // Menampilkan indikator loading
-
-  // Pilih secara acak antara indo_url dan jepang_url
-  const urls = [
-    "https://cors-anywhere.herokuapp.com/https://poophd.com/api/list?key=raQu2lrd&folder=ropbn60oORX",
-    "https://cors-anywhere.herokuapp.com/https://poophd.com/api/list?key=raQu2lrd&folder=9DVR9eBBSMH"
-  ];
-
-  const randomIndex = Math.floor(Math.random() * urls.length);
-  const selectedUrl = urls[randomIndex];
-
-  // Pilih nilai acak untuk parameter page antara 1 dan 40
-  const randomPage = Math.floor(Math.random() * 40) + 1;
-
-  const urlWithPage = `${selectedUrl}&page=${randomPage}`;
-
-  try {
-    const response = await fetch(urlWithPage);
-    const data = await response.json();
-    relatedVideos = data.videos;
-  } catch (error) {
-    console.error("Gagal mengambil video terkait:", error);
-  } finally {
-    loading = false; // Sembunyikan indikator loading setelah data diambil
-  }
-}
-
-
   
-  // async function related() {
-  //   loading = true; // Menampilkan indikator loading
+   async function related() {
+    loading = true; // Menampilkan indikator loading
 
-  //    const indo_url = "https://cors-anywhere.herokuapp.com/https://poophd.com/api/list?key=raQu2lrd&folder=ropbn60oORX"
-
-  //    const jepang_url = "https://cors-anywhere.herokuapp.com/https://poophd.com/api/list?key=raQu2lrd&folder=9DVR9eBBSMH"
-
-
-  //   try {
-  //     const response = await fetch(jepang_url);
-  //     const data = await response.json();
-  //     relatedVideos = data.videos;
-  //   } catch (error) {
-  //     console.error("Gagal mengambil video terkait:", error);
-  //   } finally {
-  //     loading = false; // Sembunyikan indikator loading setelah data diambil
-  //   }
-  // }
+    try {
+      const response = await fetch("https://poophdserver.vercel.app/relatedpost?key=raQu2lrd&limit=40");
+      const data = await response.json();
+      relatedVideos = data.videos;
+    } catch (error) {
+      console.error("Gagal mengambil video terkait:", error);
+    } finally {
+      loading = false; // Sembunyikan indikator loading setelah data diambil
+    }
+  }
 
   onMount(() => {
     related();
