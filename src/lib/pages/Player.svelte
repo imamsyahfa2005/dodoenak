@@ -10,7 +10,7 @@
     loading = true; // Menampilkan indikator loading
 
     try {
-      const response = await fetch("https://poophdserver.vercel.app/relatedpost?key=raQu2lrd&limit=40");
+      const response = await fetch("https://poophdserver.vercel.app/relatedpost?key=raQu2lrd&limit=45");
       const data = await response.json();
       relatedVideos = data.videos;
     } catch (error) {
