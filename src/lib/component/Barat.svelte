@@ -6,11 +6,12 @@
  let loading = true;
 
 
+const url  = "https://corsany-1-g0403094.deta.app/https://poophd.com/api/list?key=raQu2lrd&folder=xrTt2e6x9eS"
 
 
   let currentpage = 1
     async function getapi(page){
-    const response = await fetch(`${base_api}/barat/?key=${apikey}&page=${page}`);
+    const response = await fetch(`${url}&page=${page}`);
     const data = await response.json();
     videos = data.videos;
      loading = false;

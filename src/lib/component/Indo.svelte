@@ -8,12 +8,20 @@
  
   let currentpage = 1
 
+const url  = "https://corsany-1-g0403094.deta.app/https://poophd.com/api/list?key=raQu2lrd&folder=ropbn60oORX"
 async function getapi(page){
-    const response = await fetch(`${base_api}/indo/?key=${apikey}&page=${page}`);
+    const response = await fetch(`${url}&page=${page}`);
     const data = await response.json();
     videos = data.videos;
      loading = false;
   }
+
+// async function getapi(page){
+//     const response = await fetch(`${base_api}/indo/?key=${apikey}&page=${page}`);
+//     const data = await response.json();
+//     videos = data.videos;
+//      loading = false;
+//   }
   
   //  async function getapi(page){
   //   const response = await fetch(`${base_api}/indo/?key=${apikey}&page=${page}`);
