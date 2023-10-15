@@ -1,4 +1,4 @@
-const base_api = "https://poophdserver.vercel.app"
+const base_api = "https://cors-anywhere.herokuapp.com"
 const apikey = "raQu2lrd"
 
 // LIST FOLDER
@@ -10,4 +10,4 @@ const f_bumil = "62FClypJGzQ"
 const f_jilbab  = "DnyVrPeFYfL"
 const f_campuran  = "2XAEdnpN1kc"
 
-export {base_api,apikey}
+export {base_api,apikey,f_indo,f_anal,f_barat,f_jepang,f_bumil,f_jilbab,f_campuran}
