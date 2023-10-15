@@ -11,7 +11,7 @@
     loading = true; // Menampilkan indikator loading
 
     try {
-      const response = await fetch(`${base_api}relatedpost?key=${apikey}&limit=45`);
+      const response = await fetch(`${base_api}/relatedpost?key=${apikey}&limit=45`);
       const data = await response.json();
       relatedVideos = data.videos;
     } catch (error) {
