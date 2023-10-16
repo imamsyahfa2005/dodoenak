@@ -3,6 +3,7 @@
   import Home from './lib/pages/Home.svelte'
   import Player from './lib/pages/Player.svelte'
   import Request from './lib/pages/Request.svelte'
+  import Permintaan from './lib/pages/Permintaan.svelte'
 
   import Navbarmenu from './lib/utils/Navbarmenu.svelte'
 </script>
@@ -14,6 +15,9 @@
   <div>
     <Route path="/">
       <Home />
+    </Route>
+    <Route path="/permintaan">
+      <Permintaan />
     </Route>
      <Route path="/request">
       <Request />

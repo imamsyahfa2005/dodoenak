@@ -2,8 +2,8 @@
 import Indo from '../component/Indo.svelte' 
 import Jepang from '../component/Jepang.svelte' 
 import Barat from '../component/Barat.svelte' 
-import Annal from '../component/Annal.svelte'	
- 
+import Annal from '../component/Annal.svelte' 
+import {Link} from 'svelte-navigator' 
 
  let activeTab = 1; // Menentukan tab aktif secara default
 
@@ -23,6 +23,13 @@ import Annal from '../component/Annal.svelte'
 <div class="tab" on:click={() => setActiveTab(4)}>Annal</div>
 
   <!-- Tambahkan tab lain sesuai kebutuhan -->
+</div>
+  
+<div style="margin:10px">
+  <!-- REQUEST PERMINTAAN -->
+  <Link to="/permintaan" class="btn "
+    style="width: 100%;background-color: #fa0ae2;font-weight: bold;"
+  >Request Kalian Disini</Link>
 </div>
 
 	<div class="content">
