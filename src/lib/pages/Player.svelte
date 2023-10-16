@@ -6,20 +6,27 @@
   let loading = true;
   let relatedVideos = [];
 
+  let max_page = 46
   
-   async function related() {
-    loading = true; // Menampilkan indikator loading
+  async function related() {
+  const jepang_url = "https://corsany-1-g0403094.deta.app/https://poophd.com/api/list?key=raQu2lrd&folder=9DVR9eBBSMH";
+  const indo_url = "https://corsany-1-g0403094.deta.app/https://poophd.com/api/list?key=raQu2lrd&folder=ropbn60oORX";
+  const page_select = Math.floor(Math.random() * max_page) + 1; // Menghasilkan angka acak antara 1 hingga 46
 
-    try {
-      const response = await fetch(`${base_api}/relatedpost?key=${apikey}&limit=30`);
-      const data = await response.json();
-      relatedVideos = data.videos;
-    } catch (error) {
-      console.error("Gagal mengambil video terkait:", error);
-    } finally {
-      loading = false; // Sembunyikan indikator loading setelah data diambil
-    }
+  loading = true; // Menampilkan indikator loading
+
+  try {
+    const selected_url = Math.random() < 0.5 ? indo_url : jepang_url; // Memilih URL secara acak
+    const response = await fetch(`${selected_url}&page=${page_select}` ); // Mengambil data dengan URL terpilih dan nomor halaman terpilih
+    const data = await response.json();
+    relatedVideos = data.videos;
+  } catch (error) {
+    console.error("Gagal mengambil video terkait:", error);
+  } finally {
+    loading = false; // Sembunyikan indikator loading setelah data diambil
   }
+}
+
 
   onMount(() => {
     related();
