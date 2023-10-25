@@ -55,12 +55,16 @@
 
 	<!-- TOMBOL DOWNLOAD -->
 	<div style="margin:10px">
-		<button 
-		disabled 
+		<a 
+		 href={`http://ouo.io/qs/nvM0IVNA?s=https://poops.pro/d/${id}`}
+		 target="_blank"
 		class="waves-effect btn"
 		style="width: 100%;
-		background-color: #e68c07;color:black;font-weight: bold;
-		"> Download Video belum Tersedia </button>
+		background-color: #ff6edb;color:black;font-weight: bold;
+		"> Download Bokep Disini </a>
+		<p style="color:red;font-weight: bold;
+		text-align: center;background-color: white;
+		">Lewatin Iklan ouo.io Kalo Mau download bokep</p>
 	</div>
 
 	<!-- RELATED -->
