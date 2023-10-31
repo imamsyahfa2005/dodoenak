@@ -4,6 +4,7 @@
   import Player from './lib/pages/Player.svelte'
   import Request from './lib/pages/Request.svelte'
   import Permintaan from './lib/pages/Permintaan.svelte'
+  import Caribokep from './lib/pages/Caribokep.svelte'
 
   import Navbarmenu from './lib/utils/Navbarmenu.svelte'
 </script>
@@ -21,6 +22,9 @@
     </Route>
      <Route path="/request">
       <Request />
+    </Route>
+     <Route path="/caribokep">
+      <Caribokep />
     </Route>
     <Route path="/player/:id" let:params>
       <Player id={params.id} />

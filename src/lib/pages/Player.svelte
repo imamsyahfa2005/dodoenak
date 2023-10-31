@@ -40,11 +40,18 @@
 
 <div>
 	<div class="container" style="margin-top: 10px;">
-	<Link to="/" class="waves-effect btn "
+	<div style="display:flex;justify-content:space-between;">
+		<Link to="/" class="waves-effect btn "
 	style="background-color: #e68c07;font-weight: bold;"
 	>
-	Kembali
-</Link>
+		Kembali
+	</Link>
+	<Link to="/caribokep" class="waves-effect btn "
+	style="background-color: #5eff08;font-weight: bold;color:black"
+	>
+		Cari Bokep
+	</Link>
+	</div>
 </div>
 	<div style="margin-top:10px">
 		<iframe src={`https://poop.mom/e/${id}`}

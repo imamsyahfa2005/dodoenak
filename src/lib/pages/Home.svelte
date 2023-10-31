@@ -25,7 +25,11 @@ import {Link} from 'svelte-navigator'
   <!-- Tambahkan tab lain sesuai kebutuhan -->
 </div>
   
-<div style="margin:10px">
+<div style="margin:10px;">
+  <Link to="/caribokep" class="btn "
+    style="width: 100%;background-color: #56ff08;font-weight: bold;margin-bottom: 20px;color:black;"
+  >Cari BOKEP Lu Mau</Link>
+
   <!-- REQUEST PERMINTAAN -->
   <Link to="/permintaan" class="btn "
     style="width: 100%;background-color: #fa0ae2;font-weight: bold;"
