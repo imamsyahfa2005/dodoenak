@@ -1,12 +1,12 @@
 <script>
   export let id;
   import { onMount } from 'svelte';
-  import { Link } from 'svelte-navigator';
+  import { Link,navigate } from 'svelte-navigator';
   import {base_api,apikey} from '../../configapi/api.js'
   let loading = true;
   let relatedVideos = [];
 
-  let max_page = 46
+  let max_page = 180
   
   async function related() {
   const jepang_url = "https://corsany-1-g0403094.deta.app/https://poophd.com/api/list?key=raQu2lrd&folder=9DVR9eBBSMH";
@@ -41,11 +41,11 @@
 <div>
 	<div class="container" style="margin-top: 10px;">
 	<div style="display:flex;justify-content:space-between;">
-		<Link to="/" class="waves-effect btn "
+		<button on:click={()=>navigate(-1)} class="waves-effect btn "
 	style="background-color: #e68c07;font-weight: bold;"
 	>
 		Kembali
-	</Link>
+	</button>
 	<Link to="/caribokep" class="waves-effect btn "
 	style="background-color: #5eff08;font-weight: bold;color:black"
 	>
