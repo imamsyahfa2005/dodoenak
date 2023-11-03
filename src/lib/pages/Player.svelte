@@ -6,7 +6,7 @@
   let loading = true;
   let relatedVideos = [];
 
-  let max_page = 180
+  let max_page = 185
   
   async function related() {
   const jepang_url = "https://corsany-1-g0403094.deta.app/https://poophd.com/api/list?key=raQu2lrd&folder=9DVR9eBBSMH";
@@ -46,6 +46,11 @@
 	>
 		Kembali
 	</button>
+	<button on:click={()=>navigate(1)} class="waves-effect btn "
+	style="background-color: #e68c07;font-weight: bold;"
+	>
+		Setelahnya
+	</button>
 	<Link to="/caribokep" class="waves-effect btn "
 	style="background-color: #5eff08;font-weight: bold;color:black"
 	>
@@ -75,11 +80,11 @@
 	</div>
 
 	<!-- RELATED -->
-	<div style="margin:10px">
+	<div class="container">
 		<h5 style="font-weight:bold;color: white;">Video Lainnya</h5>
 	</div>
 
-		<div id="related" class="row">
+		<div id="related" >
 	{#if loading}
 		    <div style="display:flex;flex-direction:column;justify-content:center;
 		  margin: 50px;
@@ -102,8 +107,9 @@
 		<p>Jika Terlalu lama bisa refresh kembali atau close buka lagi</p>
 		</div>
 	{:else}
-	  {#each relatedVideos as video (video.id)}
-	    <div class="col m4 xl4 s12" >
+	  <div class="row">
+	  		{#each relatedVideos as video (video.id)}
+	    <div class="col-md-4 col-lg-4 col-xs-6" >
 	      <div class="card" on:click={()=>gotopage(video.id)}>
 	        <div class="card-image">
 	          <img src={video.image} alt={video.title} style="width:100%;background-size:cover;">
@@ -128,6 +134,7 @@
 	      </div>
 	    </div>
 	  {/each}
+	  </div>
 	 {/if}
 	</div>
 </div>

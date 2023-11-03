@@ -1,11 +1,11 @@
 <script >
-	import {Link} from 'svelte-navigator'
+	import {Link,navigate} from 'svelte-navigator'
 </script>
 <div style="background-color: black;color: white;">
 	<div style="display: flex;justify-content: space-evenly;"
 	class="p-1 shadow" 
 	>
-		<h5 style="font-weight: bold;">Bang MEKI</h5>
+		<h5 style="font-weight: bold;" on:click={()=>navigate("/")}>Bang MEKI</h5>
 		<Link to="/request" class="waves-effect btn"
 		style="background-color: #ffa805;color: black;"
 		>
