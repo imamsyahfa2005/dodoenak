@@ -61,13 +61,14 @@ async function getapi(page){
   <p style="color:white;font-size:15px;font-weight: bold;">Lu cari bokep yang lu mau disini</p>
   <input type="text" 
   bind:value={searchTitle}
-  name="" style="background-color:white;color:black;padding:3px"
+  name="" style="background-color:white;color:black;padding:3px;width: 100%;"
   placeholder="cari bokep lu mau disini bos" 
   >
-  <br>
-  <button class="btn btn-success" type="button"
+  <button class="btn btn-success mt-2" 
+  style="font-weight:bold" 
+  type="button"
   on:click={()=>getapi(currentpage)}
-  >Cari bokep</button>
+  >Cari bokep Sekarang</button>
 </div>
 
 {#if loading}
