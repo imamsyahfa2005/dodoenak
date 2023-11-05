@@ -36,6 +36,9 @@
     id = myid;
     related();
   }
+   function handleContextMenu(event) {
+    event.preventDefault();
+  }
 </script>
 
 <div>
@@ -71,6 +74,7 @@
 		 href={`http://ouo.io/qs/nvM0IVNA?s=https://dood.boo/d/${id}`}
 		 target="_blank"
 		class="waves-effect btn"
+		on:contextmenu="{handleContextMenu}"
 		style="width: 100%;
 		background-color: #ff6edb;color:black;font-weight: bold;
 		"> Download Bokep Disini </a>
