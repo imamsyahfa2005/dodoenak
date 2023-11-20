@@ -6,7 +6,7 @@
   let loading = true;
   let relatedVideos = [];
 
-  let max_page = 267
+  let max_page = 293
   
   async function related() {
   const jepang_url = "https://corsany-1-g0403094.deta.app/https://poophd.com/api/list?key=raQu2lrd&folder=9DVR9eBBSMH";
