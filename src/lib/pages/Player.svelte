@@ -62,7 +62,7 @@
 	</div>
 </div>
 	<div style="margin-top:10px">
-		<iframe src={`https://dood.boo/e/${id}`}
+		<iframe src={`https://doodx.pro/e/${id}`}
 		allowfullscreen width="100%" height="280px"
 		allowscrolling="no" 
 		></iframe>
@@ -71,7 +71,7 @@
 	<!-- TOMBOL DOWNLOAD -->
 	<div style="margin:10px">
 		<a 
-		 href={`http://ouo.io/qs/nvM0IVNA?s=https://dood.boo/d/${id}`}
+		 href={`http://ouo.io/qs/nvM0IVNA?s=https://doodx.pro/d/${id}`}
 		 target="_blank"
 		class="waves-effect btn"
 		on:contextmenu="{handleContextMenu}"
