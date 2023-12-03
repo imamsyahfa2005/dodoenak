@@ -66,7 +66,7 @@ async function getapi(page){
   </div>
 </div>
 <br>
-<h5 style="color:white">Sedang Mencari data ....</h5>
+<h5 style="color:white">Sedang Nyari BOKEP ....</h5>
 <br>
 <p>Jika Terlalu lama bisa refresh kembali atau close buka lagi</p>
 </div>
