@@ -71,7 +71,7 @@
 	<!-- TOMBOL DOWNLOAD -->
 	<div style="margin:10px">
 		<a 
-		 href={`http://ouo.io/qs/nvM0IVNA?s=https://doodx.pro/d/${id}`}
+		 href={`https://cuty.io/quick?token=3c2f8445e662326c2ebcd8d60&url=https://doodx.pro/d/${id}`}
 		 target="_blank"
 		class="waves-effect btn"
 		on:contextmenu="{handleContextMenu}"
